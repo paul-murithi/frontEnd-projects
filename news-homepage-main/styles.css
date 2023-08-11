@@ -1,0 +1,215 @@
+@font-face {
+    font-family: inter-Variablefont;
+    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+:root {
+    --soft-Orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --links: hsl(256, 5%, 57%);
+    
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+body {
+    font-family: inter-Variablefont;
+    width: 90%;
+    margin: 1rem auto;
+}
+a {
+    text-decoration: none;
+    color: var(--links);
+}
+a:hover {
+    color: var(--Soft-red);
+}
+img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+p {
+    font-size: 15px;
+}
+.header-links {
+    display: flex;
+    justify-content: space-between;
+}
+.header-links ul {
+    display: flex;
+}
+.header-links ul li {
+    padding: 0 1rem;
+    list-style-type: none;
+}
+.main-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+}
+.banner {
+    grid-column: span 2;
+}
+.side-info > * {
+    padding: 0;
+}
+.side-info {
+    grid-row: span 2;
+    background: var(--Very-dark-blue);
+    padding: 0.3rem 0.7rem;
+    border-radius: 1rem;
+}
+.side-info > h1 {
+    color: var(--soft-Orange);
+    font-size: 2.5rem;
+}
+.item-info > h1 {
+    color: var(--Off-white);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.item-info > h1:hover {
+    color: var(--soft-Orange);
+}
+.item-info > p {
+    color: hsl(237, 9%, 52%);
+}
+.horizontal-line {
+    border: 0.5px solid hsl(240, 25%, 20%);
+}
+.heading h1 {
+    color: var(--Very-dark-blue);
+    font-size: 2.7rem;
+    padding: 0;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.content-text > p {
+    color: var(--Dark-grayish-blue);
+    font-weight: 600;
+}
+.content-btn button {
+    background-color: var(--Soft-red);
+    color: var(--Off-white);
+    text-transform: uppercase;
+    border: none;
+    width: 50%;
+    padding: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.content-btn button:hover {
+    background-color: var(--Very-dark-blue);
+    box-shadow: inset;
+}
+
+
+
+
+.main-page-2-cards {
+    display: flex;
+    margin-top: 3rem;
+}
+.card {
+    padding: 0.5rem;
+    margin: 0.2rem;
+    box-shadow: 
+    0px 1.85px 3.15px 0px rgba(0, 0, 0, 0),
+    0px 8.15px 6.52px 0px rgba(0, 0, 0, 0.01),
+    0px 20px 13px 0px rgba(0, 0, 0, 0.01),
+    0px 38.52px 25.48px 0px rgba(0, 0, 0, 0.01),
+    0px 64.81px 46.85px 0px rgba(0, 0, 0, 0.02),
+    0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+    border-radius: 1rem;
+}
+.wrap {
+    display: flex;
+    height: 10rem;
+}
+.wrap > * {
+    padding: 0.2rem;
+}
+.wrap-content h1 {
+    font-size: 1.2rem;
+}
+.wrap-content > p {
+    cursor: pointer;
+}
+.wrap-content > p:hover {
+    color: var(--Soft-red);
+}
+.number {
+    color: var(--Grayish-blue);
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+@media (max-width: 1260px) {
+    .wrap {
+        height: 12rem;
+    }
+}
+@media (max-width: 1110px) {
+    .wrap {
+        height: 14.5rem;
+    }
+}
+@media (max-width: 1070px) {
+    .wrap {
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+}
+@media (max-width: 874px) {
+    .main-page-2-cards {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    .wrap {
+        height: auto;
+    }
+    .card {
+        width: 20rem;
+    }
+}
+@media (max-width: 730px) {
+    .main-page-2-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 25rem;
+    }
+   
+}
+
+@media (max-width: 750px) {
+    .main-page-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+    .banner {
+        grid-column: span 2;
+    }
+}
+@media (max-width: 700px) {
+    .main-page-grid {
+        display: inline-block;
+    }
+    .header-logo img {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .header-links {
+        display: none;
+    }
+    .card {
+        width: 15rem;
+    }
+}
