@@ -1,9 +1,13 @@
 import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0);
+import NavBar from "./components/NavBar/NavBar";
 
-  return <></>;
+function App() {
+  return (
+    <>
+      <NavBar />
+    </>
+  );
 }
 
 export default App;

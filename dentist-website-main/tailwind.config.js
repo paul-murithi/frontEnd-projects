@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         stroke: "#C2D1FF",
+        titleBlue: "#3366FF",
         buttonBG: "#3366FF",
         buttonBGHover: "#2858D1",
         linkHover: "#3366FF",
