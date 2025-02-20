@@ -46,7 +46,7 @@ const RightNavSection = ({ linkText }) => {
 
 const NavBar = () => {
   return (
-    <nav className="bg-background">
+    <nav className="bg-background pb-24">
       <header
         id="top-header"
         className="flex justify-between w-10/12 m-auto"
@@ -69,6 +69,19 @@ const NavBar = () => {
         </div>
       </header>
       <div className="bg-stroke h-0.5 w-full"></div>
+      <div
+        data-description="sub-header"
+        className="bg-navBG w-2/3 m-auto flex justify-evenly items-center font-bold mt-6 p-4 rounded-3xl"
+      >
+        {navLinks.map((link, index) =>
+          link.dropdown ? (
+            <DropdownMenu key={index} label={link.label} items={link.items} />
+          ) : (
+            <NavbarItem key={index} href={link.href} label={link.label} />
+          )
+        )}
+        <SearchBar />
+      </div>
     </nav>
   );
 };
