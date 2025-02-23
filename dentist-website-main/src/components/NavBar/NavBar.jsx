@@ -71,7 +71,7 @@ const NavBar = () => {
       <div className="bg-stroke h-0.5 w-full"></div>
       <div
         data-description="sub-header"
-        className="bg-navBG w-2/3 m-auto flex justify-evenly items-center font-bold mt-6 p-4 rounded-3xl"
+        className="bg-navBG w-2/3 m-auto  justify-evenly items-center font-bold mt-6 p-4 rounded-3xl lg:flex hidden"
       >
         {navLinks.map((link, index) =>
           link.dropdown ? (
