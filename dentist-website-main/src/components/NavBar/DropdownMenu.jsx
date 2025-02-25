@@ -9,7 +9,7 @@ const DropdownMenu = ({ label, items }) => {
 
   return (
     <div
-      className="relative group"
+      className="relative group "
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >

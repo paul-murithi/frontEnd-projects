@@ -8,6 +8,7 @@ import Image from "../Image/Image";
 // Images
 import logo from "../../assets/icons/Frame.png";
 import location from "../../assets/icons/location.png";
+import menu from "../../assets/icons/BURGER.png";
 
 const navLinks = [
   {
@@ -36,7 +37,7 @@ const navLinks = [
 
 const RightNavSection = ({ linkText }) => {
   return (
-    <div className="flex gap-3">
+    <div className="hidden lg:flex gap-3">
       {" "}
       <Image source={location} alt={"icons"} className="max-h-10" />
       <p className="text-textLight capitalize">{linkText}</p>
@@ -53,6 +54,9 @@ const NavBar = () => {
         data-description="top-header"
       >
         <div className="logo-name flex items-center h-20">
+          <button className="menu mr-6 lg:hidden" title="menu">
+            <Image source={menu} alt={"Hamburger Menu"} />
+          </button>
           <div className="logo mx-2">
             <Image source={logo} alt={"Logo"} />
           </div>
@@ -65,13 +69,15 @@ const NavBar = () => {
         <div className="flex items-center justify-between gap-8">
           <RightNavSection linkText={"st. sanguin number 40"} />
           <RightNavSection linkText={"+251-11-034-690"} />
-          <AppointmentButton />
+          <>
+            <AppointmentButton />
+          </>
         </div>
       </header>
       <div className="bg-stroke h-0.5 w-full"></div>
       <div
         data-description="sub-header"
-        className="bg-navBG w-2/3 m-auto  justify-evenly items-center font-bold mt-6 p-4 rounded-3xl lg:flex hidden"
+        className="bg-navBG w-4/5 m-auto  justify-evenly items-center font-bold mt-6 p-4 rounded-3xl lg:flex hidden"
       >
         {navLinks.map((link, index) =>
           link.dropdown ? (
