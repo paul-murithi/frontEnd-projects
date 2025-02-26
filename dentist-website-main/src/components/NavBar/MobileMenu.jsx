@@ -6,6 +6,7 @@ import NavbarItem from "./NavbarItem";
 
 import Image from "../Image/Image";
 import closeMenu from "../../assets/icons/CLOSE-BUTTON.png";
+import AppointmentButton from "./AppointmentButton";
 
 const MobileMenu = ({ onClose }) => {
   return (
@@ -28,6 +29,9 @@ const MobileMenu = ({ onClose }) => {
             <NavbarItem key={index} href={link.href} label={link.label} />
           )
         )}
+      </div>
+      <div className="flex justify-center mt-8">
+        <AppointmentButton />
       </div>
     </div>
   );
