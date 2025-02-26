@@ -10,7 +10,7 @@ import Header from "./Header";
 import logo from "../../assets/icons/Frame.png";
 import location from "../../assets/icons/location.png";
 
-const navLinks = [
+export const navLinks = [
   {
     label: "Home",
     href: "/",
