@@ -12,18 +12,18 @@ const HeroText = () => {
       </div>
 
       <h2
-        className="text-heading font-extrabold text-5xl"
+        className="text-heading font-extrabold text-4xl md:text-7xl"
         aria-label="subheading"
       >
         High Quality &
       </h2>
       <h2
-        className="text-heading font-extrabold text-5xl pt-4"
+        className="text-heading font-extrabold text-4xl md:text-7xl pt-4"
         aria-label="subheading"
       >
         <span className="text-titleBlue">Painless </span>Dentistry
       </h2>
-      <p className="text-textLight font-light py-8 pr-2">
+      <p className="text-textLight font-light py-8 pr-2 md:text-lg">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius cum
         labore fuga, architecto possimus quibusdam veniam sunt ex incidunt
         ducimus asperiores optio natus similique explicabo commodi?
