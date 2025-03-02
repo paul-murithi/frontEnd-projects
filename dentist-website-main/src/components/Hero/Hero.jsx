@@ -9,6 +9,7 @@ const Hero = () => {
     <div className="bg-background">
       <HeroText />
       <CTAButton />
+      <DoctorCard />
     </div>
   );
 };
