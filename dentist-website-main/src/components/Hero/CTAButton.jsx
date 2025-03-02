@@ -10,14 +10,14 @@ const CTAButton = () => {
   return (
     <div
       aria-label="CTA Links"
-      className="flex justify-between pr-4 pb-12 pl-10"
+      className="flex flex-col sm:flex-row items-center sm:justify-between md:justify-start md:gap-10 gap-4 sm:gap-0 px-6 sm:pl-10 sm:pr-4 pb-12"
     >
-      <button className="uppercase bg-buttonBG hover:bg-buttonBGHover transition text-white px-10 py-2 rounded-3xl font-semibold">
+      <button className="uppercase bg-buttonBG hover:bg-buttonBGHover transition text-white px-6 sm:px-10 py-2 rounded-3xl font-semibold">
         contact us
       </button>
-      <a href="" className="flex items-center">
-        <Image source={playLogo} className="pr-3" />
-        <span>Watch Video Profile</span>
+      <a href="#" className="flex items-center">
+        <Image source={playLogo} className="pr-2 sm:pr-3 w-10 sm:w-auto" />
+        <span className="text-sm sm:text-base">Watch Video Profile</span>
       </a>
     </div>
   );
