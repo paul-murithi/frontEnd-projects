@@ -24,8 +24,6 @@ const logoLayout = [
   },
 ];
 
-const scrollBarStyles = {};
-
 const Patners = () => {
   return (
     <div className="pt-[10%]">
@@ -34,16 +32,19 @@ const Patners = () => {
       </h2>
 
       <div
-        className="flex overflow-x-auto  gap-24 py-[10%]"
+        className="flex flex-row flex-nowrap items-center space-x-8 overflow-x-auto scrollbar-hide w-full px-4 py-[10%]"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
         }}
       >
         {logoLayout.map((logo, index) => (
-          <div className="flex" key={index}>
-            <Image source={logo.src} />
-            <Image source={logo.name} />
+          <div
+            className="flex flex-col items-center shrink-0 w-[120px]"
+            key={index}
+          >
+            <Image source={logo.src} className="w-24 h-auto object-contain" />
+            <Image source={logo.name} className="w-20 h-auto pt-2" />
           </div>
         ))}
       </div>
