@@ -1,0 +1,23 @@
+.marquee {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  animation: scroll 150s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee__content {
+  flex-shrink: 0;
+}
