@@ -29,7 +29,7 @@ const logoLayout = [
 const Patners = () => {
   return (
     <div className="pt-[10%]">
-      <h2 className="uppercase text-subheading font-bold text-center">
+      <h2 className="uppercase text-subheading font-bold text-center mb-8">
         our clinic patners
       </h2>
 
