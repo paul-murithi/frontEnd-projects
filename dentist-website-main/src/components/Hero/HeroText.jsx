@@ -10,25 +10,49 @@ const HeroText = () => {
           Welcome to confident
         </h1>
       </div>
-
-      <h2
-        className="text-heading font-extrabold text-4xl md:text-7xl"
-        aria-label="subheading"
-      >
-        High Quality &
-      </h2>
-      <h2
-        className="text-heading font-extrabold text-4xl md:text-7xl pt-4"
-        aria-label="subheading"
-      >
-        <span className="text-titleBlue">Painless </span>Dentistry
-      </h2>
-      <p className="text-textLight font-light py-8 pr-2 md:text-lg">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius cum
-        labore fuga, architecto possimus quibusdam veniam sunt ex incidunt
-        ducimus asperiores optio natus similique explicabo commodi?
-      </p>
+      <SubHeading content={"High Quality &"} hasHighlightedText={false} />
+      <SubHeading
+        content={"Dentistry"}
+        highlightedText={"Painless "}
+        hasHighlightedText={true}
+      />
+      <LightText
+        content={
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius cumlabore fuga, architecto possimus quibusdam veniam sunt ex inciduntducimus asperiores optio natus similique explicabo commodi?"
+        }
+      />
     </div>
+  );
+};
+
+export const SubHeading = ({
+  content,
+  hasHighlightedText,
+  highlightedText,
+  textBefore,
+}) => {
+  return hasHighlightedText ? (
+    <h2
+      className="text-heading font-extrabold text-4xl md:text-7xl pt-4"
+      aria-label="subheading"
+    >
+      {textBefore && content}
+      <span className="text-titleBlue">{highlightedText}</span>
+      {textBefore ? "" : content}
+    </h2>
+  ) : (
+    <h2
+      className="text-heading font-extrabold text-4xl md:text-7xl"
+      aria-label="subheading"
+    >
+      {content}
+    </h2>
+  );
+};
+
+export const LightText = ({ content }) => {
+  return (
+    <p className="text-textLight font-light py-8 pr-2 md:text-lg">{content}</p>
   );
 };
 
